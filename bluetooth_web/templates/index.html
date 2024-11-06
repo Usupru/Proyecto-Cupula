@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluetooth HC-05 Control</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Control HC-05</h1>
+        <form method="POST">
+            <button type="submit" name="action" value="left">Left</button>
+            <button type="submit" name="action" value="right">right</button>
+        </form>
+        {% if response %}
+            <div class="response">
+                <strong>Output:</strong> {{ response }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
